@@ -1,0 +1,10 @@
+{
+    "baseUrl": null,
+    "env": {},
+    "screenshotsFolder": null,
+    "fixturesFolder": "./test/e2e",
+    "integrationFolder": "./test/e2e",
+    "supportFile": "./test/e2e",
+    "videosFolder": "./test/e2e",
+    "testFiles": "**/*.spec.js"
+}
