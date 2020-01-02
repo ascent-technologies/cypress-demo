@@ -15,7 +15,7 @@ jobs:
       - checkout
 
       - run:
-          name: Build
+          name: Install
           command: make install
 
       - run:
