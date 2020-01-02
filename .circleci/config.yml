@@ -16,19 +16,11 @@ jobs:
 
       - run:
           name: Build
-          command: make build
+          command: make install
 
       - run:
-          name: Run formatting tests
-          command: make test:format
-
-      - run:
-          name: Unit Tests
-          command: make test:unit
-
-      - run:
-          name: Integration Tests
-          command: make test:integration
+          name: Run tests
+          command: make integration-test
 
       - store_test_results:
           path: test_results
