@@ -1,67 +1,96 @@
-# Testing in Cypress
+# Cypress Demo
 ![banner](./public/assets/images/logo.png)
 
 ![badge]()
-![badge]()
-[![license](https://img.shields.io/github/license/dianafreeman/:repo.svg)](LICENSE)
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code-of-conduct.md)[![license](https://img.shields.io/github/license/dianafreeman/:repo.svg)](LICENSE)[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
-This is an example file with maximal choices selected.
 
-This is a long description.
 
-## Table of Contents
+##  Requirements
 
-- [Security](#security)
-- [Background](#background)
-- [Install](#install)
-- [Usage](#usage)
-- [API](#api)
-- [Contributing](#contributing)
-- [License](#license)
+[Docker](https://docs.docker.com/) and [docker-compose](https://docs.docker.com/compose) 
 
-## Security
+##  Install
 
-### Any optional sections
+Run the following command to prep your local environment
 
-## Background
-
-### Any optional sections
-
-## Install
-
-This module depends upon a knowledge of [Markdown]().
-
-```
+```sh
+$ make install
 ```
 
-### Any optional sections
+##  Usage
 
-## Usage
+Run the following command to view the react app bolerplate
 
+```sh
+$ make client
 ```
+
+Run the following command to open a bash console within the docker container
+
+```sh
+$ make cli
 ```
 
-Note: The `license` badge image link at the top of this file should be updated with the correct `:user` and `:repo`.
+##  Testing
 
-### Any optional sections
+Run the following command to run the cypress integration test
 
-## API
+```sh
+$ make integration-test
+```
 
-### Any optional sections
+## Platforms & Frameworks
 
-## More optional sections
+### System/Infra
+
+* [Docker](https://docs.docker.com/) and [docker-compose](https://docs.docker.com/compose) *(optional)*
+
+* [Create React App](https://create-react-app.dev/)
+
+### Testing
+
+Visit the confluence page for additional details on testing frameworks, rationale, and practices
+
+* [Cypress.io](https://www.cypress.io/)
+* [React Testing Library](https://github.com/testing-library/react-testing-library)
+* [RSpec](https://rspec.info/)
+* [Jest](https://jestjs.io/)   (*[c/o Create React App](c/o Create React App)*)
+* [Chai Assertion Library](https://www.chaijs.com/)
+
+  ### CI/CD
+
+- [CircleCI](https://circleci.com/dashboard)
+
+### Code Style Enforcement
+
+* [Rubocop](https://github.com/rubocop-hq/rubocop) (Ruby)
+
+* [Prettier](https://prettier.io/) (Javascript)
+
+* [EsLint](https://eslint.org/) (*[c/o Create React App](https://create-react-app.dev/docs/setting-up-your-editor/)*)
+
+  
+
+## 🏗 Convenience Tooling
+
+**List targets in Makefile**
+
+Run `make` from the root directory to view a list and description of make targets 
+
+**NPM Executables**
+
+This package uses a few additional NPM targets to automate different build options for Cypress.io. Run `npm run ` from the root directory to view a full list of NPM executables. 
+
+
 
 ## Contributing
 
-See [the contributing file](CONTRIBUTING.md)!
+Feel free to dive in and submit PRs.
 
-PRs accepted.
+This project follows the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct).
 
-Small note: If editing the Readme, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
+##### Contributors
 
-### Any optional sections
+[Diana M Steakley-Freeman](github.com/dianafreeman)
 
-## License
-
-[MIT © Richard McRichface.](../LICENSE)
