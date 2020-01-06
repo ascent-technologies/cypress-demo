@@ -1,4 +1,5 @@
 version: 2
+
 jobs:
   build:
     docker:
@@ -21,4 +22,6 @@ jobs:
           key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
             - ~/.cache  ## cache both yarn and Cypress!
-      - run: $(yarn bin)/cypress run --record --key <record_key>
+      - run:
+          name: Run Cypress testing
+          command: $(yarn bin)/cypress run
