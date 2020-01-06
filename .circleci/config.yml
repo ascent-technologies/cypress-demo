@@ -23,8 +23,8 @@ jobs:
           paths:
             - ~/.cache  ## cache both yarn and Cypress!
       - run:
-          name: Install Dependencies
-          command: yarn run start
+          name: Start The App
+          command: yarn start
       - run:
           name: Run Cypress testing
           command: yarn run test:integration
