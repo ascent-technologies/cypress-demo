@@ -22,6 +22,11 @@ jobs:
           key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
             - ~/.cache  ## cache both yarn and Cypress!
+
+      - run:
+        name: Install Dependencies
+        command: yarn start
+        
       - run:
           name: Run Cypress testing
-          command: $(yarn bin)/cypress run
+          command: yarn run test:integration
