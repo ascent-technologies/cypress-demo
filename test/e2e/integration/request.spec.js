@@ -1,6 +1,6 @@
 
-describe("request", function() {
-  it("should display ", function() {
+describe("AJAX Request", function() {
+  it("should show the XHR response body in div [data-name=success] ", function() {
     // Use the form
     cy.get("select[name=method]").invoke('val','GET').trigger('change')//.select("GET");
 
@@ -12,7 +12,7 @@ describe("request", function() {
     cy.get('button[type="submit"]').click();
 
     // Give this element 10 seconds to appear
-    cy.get("[data-name=success] pre", {timeout: 1000}).should('contain.text','"response": {')
+    cy.get("[data-name=success] pre").should('contain.text','"response": {')
 
   });
 });

@@ -15,17 +15,17 @@ install: ## build the docker image
 
 .PHONY: client
 client: ## start the react UI
-	@docker-compose run --rm client				yarn start
+	@docker-compose run --rm web				yarn start
 
 .PHONY: cli
 cli: ## start a bash CLI inside the container
-	@docker-compose run --rm client    			bash
+	@docker-compose run --rm web    			bash
 
 PHONY: integration-test
 integration-test: ## run cypress integration testing
-	@docker-compose run --rm client    			yarn run test:integration
+	@docker-compose run --rm cypress
 
 PHONY: format
 format: ## autoformat js, jsx, and json files
-	@docker-compose run --rm client   			yarn format
+	@docker-compose run --rm web   			yarn format
 

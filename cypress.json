@@ -1,10 +1,10 @@
 {
-  "baseUrl": "https://localhost:3000",
+  "baseUrl": "http://localhost:3000",
   "env": {},
-  "screenshotsFolder": null,
   "fixturesFolder": "./test/fixtures",
   "integrationFolder": "./test/e2e/integration",
+  "pluginsFolder": "./test/e2e/plugins",
+  "screenshotsFolder": "./test/e2e/screenshots",
   "videosFolder": "./test/e2e/videos",
-  "testFiles": "**/*.spec.js",
   "supportFile": "./test/e2e/support"
 }

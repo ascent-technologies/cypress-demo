@@ -1,4 +1,4 @@
-version: '3.7'
+version: "3.7"
 
 services:
   web:
@@ -6,10 +6,21 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - '.:/app/'
-      - '/app/node_modules'
+      - ".:/app/"
+      - "/app/node_modules"
     ports:
       - 3000:3000
     command: yarn start
     environment:
       - NODE_ENV=development
+
+  cypress:
+    image: cypress
+    depends_on:
+      - web
+    environment:
+      - CYPRESS_baseUrl=http://web:3000
+    command: yarn run test:integration
+    volumes:
+      - ./cypress:/app/cypress
+      - ./cypress.json:/app/cypress.json

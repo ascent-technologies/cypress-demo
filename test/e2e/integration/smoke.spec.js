@@ -1,7 +1,6 @@
-describe('A [smoke] Test of a Test', function() {
-    it('passes if tests are runnign ', function() {
-      expect(true).to.be(true)
-      // TODO: make this a dom test if the root div is present
-      // cy.route("http://localhost:3000");
-    })
+describe('The app', function() {
+    it('should not explode on load', function() {
+      let rootDiv = cy.get('div#root') // CRA Root page element, wont render if something's gone wrong
+      expect(rootDiv).to.exist
+    });
   })
