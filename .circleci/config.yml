@@ -16,21 +16,11 @@ jobs:
     executor: cypress-demo
     steps:
       - checkout
+      # - restore_cache:
+      #     keys:
+      #       - v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
+      #       - v1-deps-{{ .Branch }}
+      #       - v1-deps
       - run:
           name: Build integration
-          command: docker-compose build
-
-      - run:
-          name: Build integration
-          command: make test-integration
-
-      - run:
-          name: Setup database
-          command: docker-compose run web rails db:create db:schema:load db:seed
-
-      - run:
-          name: Run integration tests
-          command: make test-integration
-
-      - store_test_results:
-          path: test_results
+          command: make integration-test
