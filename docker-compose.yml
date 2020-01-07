@@ -22,5 +22,5 @@ services:
       - CYPRESS_baseUrl=http://web:3000
     command: yarn run test:integration
     volumes:
-      - ./cypress:/app/cypress
+      - ./test/e2e:/app/test/e2e
       - ./cypress.json:/app/cypress.json
