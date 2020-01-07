@@ -7,12 +7,10 @@ services:
       dockerfile: Dockerfile
     volumes:
       - .:/app/
-      - ./public:/app/public
-      - ./build:/app/build
       - /app/node_modules
+      - ./Makefile:/app/Makefile
     ports:
       - 5000:5000
-    command: yarn run serve
     environment:
       - NODE_ENV=development
 
@@ -21,8 +19,9 @@ services:
     depends_on:
       - web
     environment:
-      - CYPRESS_baseUrl=http://web:5000
-    command: yarn run test:integration
+      - CYPRESS_baseUrl=http://localhost:5000
+    command: make integration-test
     volumes:
+      - ./Makefile:/app/Makefile
       - ./test/e2e:/app/test/e2e
       - ./cypress.json:/app/cypress.json

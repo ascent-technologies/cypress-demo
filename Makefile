@@ -13,17 +13,13 @@ help:
 install: ## build the docker network
 	@docker-compose build
 
-.PHONY: client
-client: ## start the react UI
-	@docker-compose run --rm web				yarn start
-
-.PHONY: cli
-cli: ## start a bash CLI inside the container
-	@docker-compose run --rm web    			bash
+.PHONY: webserver
+webserver: ## serve the public folder
+	@docker-compose up --build web
 
 PHONY: integration-test
 integration-test: ## run cypress integration testing
-	@docker-compose run --rm cypress
+	@docker-compose up
 
 PHONY: format
 format: ## autoformat js, jsx, and json files
