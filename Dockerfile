@@ -6,10 +6,16 @@ RUN apk update && apk upgrade && apk add --update --no-cache \
 
 WORKDIR /app
 
+RUN yarn global add serve
+
 ENV PATH /app/node_modules/.bin:$PATH
 
 COPY package.json ./
 COPY yarn.lock ./
 
 RUN yarn install
+
+
+
+
 

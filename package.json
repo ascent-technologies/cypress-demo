@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
+    "start": "react-scripts start",
+    "serve": "serve -s build",
     "format": "npx prettier --write 'src/**/*.{js,jsx,json}'",
     "test:unit": "npx react-scripts test --watchAll=false --all --ci --coverage ",
     "test:unit:watch": "npx react-scripts test --verbose ",
